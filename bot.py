@@ -22,8 +22,8 @@ from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters import CommandStart, CommandObject
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-# ضع التوكن الخاص بك هنا
-BOT_TOKEN = "8619380774:AAHxwRm8eAGcTbigt24_robTfS4JBro3Bss"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+
 
 MIN_WITHDRAWAL = 100.0
 MINING_REWARD = 1.00
