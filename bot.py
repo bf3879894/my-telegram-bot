@@ -1,3 +1,20 @@
+import os
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+
+class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is running 24/7!")
+
+def run_web_server():
+    port = int(os.environ.get("PORT", 10000))
+    server = HTTPServer(('0.0.0.0', port), SimpleHTTPRequestHandler)
+    server.serve_forever()
+
+threading.Thread(target=run_web_server, daemon=True).start()
+
 import asyncio
 import logging
 from datetime import datetime
@@ -6,7 +23,7 @@ from aiogram.filters import CommandStart, CommandObject
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # ضع التوكن الخاص بك هنا
-BOT_TOKEN = "8619380774:AAHDljc3jbuNZd3P6b35V1u9ZzS4wI3azUA"
+BOT_TOKEN = "8619380774:AAHxwRm8eAGcTbigt24_robTfS4JBro3Bss"
 
 MIN_WITHDRAWAL = 100.0
 MINING_REWARD = 1.00
