@@ -6,7 +6,7 @@ from aiogram.filters import CommandStart, CommandObject
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # ضع التوكن الخاص بك هنا
-BOT_TOKEN = "8619380774:AAHQGaLZltjLEEJNXdLPPorD939GX1cyWX4"
+BOT_TOKEN = "8619380774:AAHDljc3jbuNZd3P6b35V1u9ZzS4wI3azUA"
 
 MIN_WITHDRAWAL = 100.0
 MINING_REWARD = 1.00
